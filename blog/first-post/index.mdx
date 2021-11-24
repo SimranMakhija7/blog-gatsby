@@ -1,16 +1,41 @@
 ---
-title: "First Post"
-date: "2021-07-23"
-hero_image: "./image.png"
-hero_image_alt: "turned on iPhone on top of brown wooden surface"
-hero_image_credit_text: "Tyler Lastovich"
-hero_image_credit_link: "https://unsplash.com/photos/e31ANd1PXUw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
+title: "Get started with Git and Github (Part 1) - Basic Git terminology"
+date: "2021-11-24"
 ---
 
-This is my first blog post! Isn't it *great*?
+## What is Git?
+Git is formally defined as a version control system for tracking changes in computer files and coordinating work on those files among multiple people that is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files. 
 
-Some of my **favorite** things are:
+More often than not, real life software projects involve various people working on different sections of the project. In this case it is important to have a mechanism to track what each one does and the changes they make. This is what a version control system provides. Git is essentially a way to track all changes that people make in a project and companion tooling to help navigate these changes.
 
-* Petting dogs
-* Singing
-* Eating potato-based foods
+When I say "navigate these changes", it means that you can see who chnaged what, when and why (*good commit messages help here!*), and it also gives you a way to put together or "merge" work done by different people in a "branched" parallel manner without discarding any useful code.
+
+The "version" in version control refers to the fact that you can go back to older versions of your codebase should your specifications and software requirements change.
+
+Git could rightly be called "Google Docs' or Microsoft Word's 'track changes' feature on steroids". It helps you collaborate with a number of people in real time, without 'breaking' the code.
+
+## What is a repository?
+
+A repository is analogous to a folder in your filesystem. It is the folder that contains all of your project's files and the tracking abilities of git. In addition to project files, the repository also contains the files' revision history.
+
+In simple words, a repository is the outermost box containing all the files of a project and their tracking information.
+
+## What is a remote?
+A remote is *another* version of your repository that lives on a different computer. That computer could belong to GitHub, another user or maybe some other server. You can add one or more remotes to your local repository but beware, this does not mean that these repositories are automatically synchronised, each remote is **another independent** version of the repository. You can 'push' changes to a remote in order to sync it with your local repository.
+
+The git remote command lets you create, view, and delete connections to other repositories. A remote is identified by a not-very-convenient URL but can be given a convenient (nick)name. Once the remote is added with a given name, that name can be used to reference it in future uses. The remote URL can be an SSH or HTTP URL.
+
+## What is Branching?
+When multiple people want to work simultaneously on the same codebase, the concept of branching comes into play. Branches allow you to maintain separate versions of the code within your repository and work on them simultaneously in an independent manner.
+A branch is essentially is a unique set of code changes with a unique name. Each repository can have one or more branches. 
+
+### Why various branches and not separate repositories?
+
+## What is Merging?
+When a bunch of people make a set of changes to a common codebase, they will all have to eventually be consolidated and to do so git uses the technique of 'merging'.
+The *git merge* command allows you to put together changes made in two different branches into one common branch.
+
+## What are Merge Conflicts? 
+A merge conflict occurs when we try to merge two branches and there are clashes or conflictss in the code (or text) present in files on these branches. 
+To put it simply, a merge conflict arises if a line on a file has different contents in both branches. 
+Git uses less than and greater than signs to denote a merge conflict. In order to *resolve* a conflict, we need to go into the file and make it look like it should and then commit the changes we make.
