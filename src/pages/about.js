@@ -1,15 +1,26 @@
-// Step 1: Import React
+
 import * as React from 'react'
 import Layout from '../components/layout'
 
-// Step 2: Define your component
 const AboutPage = () => {
   return (
     <Layout pageTitle="About Me">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
+      <p>
+        Hi! I am Simran Makhija 🙋🏻‍♀️ Nice to meet you 🤝  
+      </p>
+      <p>
+        I am a final year Computer Science &amp; Engineering student from Indore, India.👩‍💻
+        <br/>
+        I am an explorer in tech and have mostly worked in front-end development so far and have dabbled around in some product designing, cloud computing and software architure.🙂
+        <br/>
+        I am an active member of various tech communities and am a part of a few community programs, namely Microsoft Learn Student Ambassadors and GitHub campus experts.👥 🌸 
+      </p>
+      <p>
+        Currently, I have taken up the #100DaysOfCode challenge. I have been learning GatsbyJS as a part of it and been creating this site.
+      </p>
+
     </Layout>
   )
 }
 
-// Step 3: Export your component
 export default AboutPage 
